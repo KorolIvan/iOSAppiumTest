@@ -21,12 +21,16 @@ public class IOSSimpleTest {
     public void setUp() throws MalformedURLException {
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("platformName", "iOS");
-        capabilities.setCapability("deviceName", "38a30851daff2a86e69ef3f176bd81442529fb07");
-        capabilities.setCapability("platformVersion", "10.2");
-        capabilities.setCapability("browserName", "");
+        //capabilities.setCapability("deviceName", "38a30851daff2a86e69ef3f176bd81442529fb07");
+        capabilities.setCapability("deviceName", "iPhone");
+        capabilities.setCapability("udid", "38a30851daff2a86e69ef3f176bd81442529fb07");
+        capabilities.setCapability("platformVersion", "10.3");
+        //capabilities.setCapability("browserName", "");
         //capabilities.setCapability("deviceOrientation", "portrait");
         capabilities.setCapability("bundleId", "management.boost.SBA");
-        capabilities.setCapability("appiumVersion", "1.0.0");
+        //capabilities.setCapability("bundleId", "com.apple.Preferences");
+        //capabilities.setCapability("appiumVersion", "1.6.4");
+        capabilities.setCapability("appiumVersion", "1.6.5-beta");
 
         driver = new IOSDriver(new URL("http://127.0.0.1:4723/wd/hub"), capabilities);
     }
